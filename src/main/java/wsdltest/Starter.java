@@ -31,7 +31,7 @@ public class Starter {
         server.addConnector(connector);
         ServletContextHandler handler = new ServletContextHandler();
         handler.setContextPath("/context");
-        handler.addServlet(new ServletHolder(servlet), "/cxf");
+        handler.addServlet(new ServletHolder(servlet), "/cxf/*");
         server.setHandler(handler);
         
         server.start();
